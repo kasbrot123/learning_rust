@@ -4,14 +4,19 @@ use std::env;
 
 fn main() {
 
-    let n: i32 = 10;
-    // for argument in env::args() {
-    //     n = argument;
-    //     break
-    // }
-
-    let field: char = 'x';
+    let mut n: i32 = 10;
+    let mut field: char = '█';
     let empty: char = ' ';
+
+    // parse input arguments
+    let args: Vec<String> = env::args().collect();
+    if args.len() > 1 {
+        n = args[1].parse().unwrap();
+    }
+    if args.len() > 2 {
+        field = args[2].parse().unwrap();
+    }
+
 
     for i in 1..=n {
         for _j in 1..=n {
