@@ -31,13 +31,4 @@ fn main() {
         println!();
     }
 
-    // println!("Hello world");
-    //
-    // let mut number_input = String::new();
-    //
-    // io::stdin().read_line(&mut number_input).expect("Fail to read line");
-    //
-    // println!("this is the input: {}", number_input);
-    // println!("Length: {}", number_input.len());
-
 }
