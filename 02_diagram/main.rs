@@ -3,7 +3,7 @@ use std::process;
 
 
 
-fn diagram(width: usize, height: usize) {
+fn create_diagram(width: i32, height: i32) {
 
     let padding_top: i32 = 2;
     let padding_bottom: i32 = 2;
@@ -12,39 +12,39 @@ fn diagram(width: usize, height: usize) {
     let diagram_width: i32 = width - padding_left - padding_right;
     let diagram_height: i32 = height - padding_top - padding_bottom;
     // let diagram = [mut [mut char, x], y];
+    
+    // let mut diagram: Vec<Vec<char>> = Vec::new();
+    // Populate the 2D vector.
+    // for i in 0..height {
+    //     // Create a new row (a Vec of chars).
+    //     let mut row: Vec<char> = Vec::new();
+    //     for j in 0..width {
+    //         // Add characters to the row.  Example: 'A', 'B', 'C', etc.
+    //         // row.push(('A' as u8 + (i * num_cols + j) as u8) as char); // Fill with A, B, C, ...
+    //         row.push(' ')
+    //     }
+    //     // Add the row to the matrix.
+    //     diagram.push(row);
+    // }
+    let mut diagram: Vec<Vec<char>> = vec![vec![' '; width as usize]; height as usize]; // Initialize with spaces
+                                                                   //
+    diagram[(padding_top+1) as usize][(padding_left+1) as usize] = '^';
+    diagram[(height-padding_top-1) as usize][(padding_left+1) as usize] = '+';
+    diagram[(height-padding_top-1) as usize][(width-padding_right) as usize] = '>';
 
-    // Base 1d array
-    let mut grid_raw = vec![0; width * height];
-
-    // Vector of 'width' elements slices
-    let mut grid_base: Vec<_> = grid_raw.as_mut_slice().chunks_mut(width).collect();
-
-    // Final 2d array `&mut [&mut [_]]`
-    let grid = grid_base.as_mut_slice();
-
-    // // Accessing data
-    // grid[0][0] = 4;
-
-    diagram[padding_top+1, padding_left+1] = '^';
     for i in (padding_top+2)..(height-padding_bottom-1) {
-        grid[i][padding_left+1] = '|'
+        diagram[i as usize][(padding_left+1) as usize] = '|'
+    }
+    for i in (padding_left+2)..(width-padding_right) {
+        diagram[(height-padding_top-1) as usize][i as usize] = '-'
     }
 
     for i in 0..height {
         for j in 0..width {
-            print!(grid[i][j]);
+            print!("{}", diagram[i as usize][j as usize]);
         }
         println!();
     }
-    // for i in 0..padding_top {
-    //     println!();
-    // }
-    // for i in 0..padding_left {
-    //     print!(" ");
-    // }
-    // println!("^");
-    // for 
-    // for i in 
 
 }
 
@@ -67,7 +67,7 @@ fn main() {
         process::exit(1);
     }
 
-    diagram(x, y);
+    create_diagram(x, y);
 
     // for i in 1..=n {
     //     for _j in 1..=n {
