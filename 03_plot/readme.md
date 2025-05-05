@@ -5,7 +5,7 @@ Now i have the diagram i want to plot something in this
 
 
                                                                                  
- Amplitude                                                                            
+ Amplitude                                                                       
                                                                                  
     ^                                                                            
  10 -                                                                            
@@ -34,5 +34,5 @@ Now i have the diagram i want to plot something in this
     +-|----------|----------|----------|----------|----------|----------|---->   
       0         10         20         30         40         50         60        
                                                                                  
-                                      Time                                      
+                                      Time                                       
 
