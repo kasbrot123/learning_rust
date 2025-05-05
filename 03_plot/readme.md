@@ -3,7 +3,7 @@
 
 Now i have the diagram i want to plot something in this
 
-
+```
                                                                                  
  Amplitude                                                                       
                                                                                  
@@ -36,3 +36,4 @@ Now i have the diagram i want to plot something in this
                                                                                  
                                       Time                                       
 
+```

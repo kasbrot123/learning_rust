@@ -1,12 +1,22 @@
 # Repository for learning Rust
 
-repository for learning rust, documentation..
-
-
-## Notes
-
+Repository for learning rust, documentation..
 I will try to write notes of the examples and what is the idea.
 
+
+## Main Project
+
+The main project will be a command line tool which can create plots in the terminal. Based on the idea from Jon G. I will try to achieve the same goal which is creating this tool and to learn rust.
+
+### Similar Tools
+
+Some tools how the final version should look like
+- [Guff](https://github.com/silentbicycle/guff) (Video Jon G.)
+- [YouPlot](https://github.com/red-data-tools/YouPlot) (very pretty!)
+- [Gnuplot](http://www.gnuplot.info/) (also has terminal capabilities)
+
+
+---
 
 ## Logs
 
